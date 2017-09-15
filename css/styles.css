@@ -1,0 +1,294 @@
+:root {
+  --light-color: #e8eff7; /*picked order-item, borders*/
+  --order-details-color: #eff4f8;
+  --active-icon-color: #427BAD;
+  --light-text: ;
+  --dark-text: dimgray;
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after{ box-sizing: inherit; }
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  background: linear-gradient(to top, whitesmoke, lightsteelblue);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#border-top {
+  position: fixed;
+  width: 100%;
+  height: 3px;
+  background-color: darkcyan;
+}
+
+.container {
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  display: flex;
+}
+
+/*HEADER*/
+header {
+  text-align: center;
+  line-height: 1.5rem;
+  padding: 0.4rem;
+  height: 2.2rem;
+  color: gray;
+}
+
+.main-header {
+  border-bottom: 1px solid lightsteelblue;
+  background-color: var(--order-details-color);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+}
+.sidebar-header button {
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: auto;
+}
+#aside-header-text {
+  margin-right: auto;
+  margin-left: -20px;
+}
+
+
+/*SEARCH FORM*/
+.search-form {
+  width: 98%;
+  margin-left: 1%; /*1% right, so search-form exactly in the center */
+  height: 1.5rem;
+  border: 1px solid darkgrey;
+  padding-top: 2px;
+
+}
+input[placeholder]{
+  padding-left: 1%;
+  font-style: italic;
+}
+.search-query {
+  width: 80%;
+  border: none;
+}
+
+input:focus{ outline-style: none; }
+
+.fa {
+  background: none;
+  border: none;
+  color: gray;
+}
+.fa-refresh {
+  margin-left: 3%;
+}
+
+/*SIDEBAR*/
+aside {
+  min-width: 290px;
+  height: 100vh;
+  border-right: 1px solid var(--order-details-color);
+  z-index: 1; /*for border-top in the whole page like on the hw-screenshot*/
+  display: flex;
+  flex-direction: column;
+}
+.orders-wrapper{
+  flex: 1;  /* 60px = 35px (header) + 25px (search-form); 35px - footer */
+  overflow-y: auto;
+}
+
+.order-item p { margin: 0; }
+
+.order-item {
+  width: 100%;
+  min-height: 6rem;
+  padding: 0 1em 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  border-top: 2px solid whitesmoke;
+  color: gray;
+}
+.order-number {
+  font-size: 1.1rem;
+  color: var(--dark-text);
+}
+.order-date {
+  font-size: 1.3rem;
+  color: var(--dark-text);
+  letter-spacing: -1px;
+}
+
+.status-in-time { color: forestgreen; }
+.status-urgent { color: orange; }
+.opened { background-color: var(--light-color); }
+
+.text-right {
+  text-align: right;
+  align-self: flex-start;
+  padding-top: 0.7rem;
+}
+aside button { padding: 0;}
+
+/*MAIN CONTENT*/
+main {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+main h2 {
+  padding: 1.5%;
+  color: var(--dark-text);
+  font-weight: 300;
+  margin: 0 0 1vh 0;
+  padding-bottom: 1vh;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+}
+/*main: 1 block*/
+.general-info {
+  min-height: 15rem;
+  background-color: var(--order-details-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3% 3% 0 3%;
+  color: var(--dark-text);
+  line-height: 0.6rem;
+  font-size: 13px;
+  border-bottom: 3px solid var(--light-color);
+}
+
+.first-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.big-font { font-size: 20px; }
+.left-side .big-font{ padding-bottom: 2vh; }
+.right-side { text-align: right; }
+.right-side .big-font { line-height: 0; }
+
+.second-row {
+  display: flex;
+  justify-content: flex-start;
+}
+.second-row button {
+  color: var(--active-icon-color);
+  padding: 0;
+  margin-right: 2vw;
+  padding-bottom: 0.5rem; 
+}
+#active {
+  margin-bottom: -3px;
+  border-bottom: 3px solid var(--active-icon-color);
+}
+
+/*main: 2-block*/
+.shipping-address h2 {
+  border-bottom: 1px solid lightgray;
+}
+.shipping-address {
+  min-height: 10.5rem;
+  background-color: white;
+  font-size: 12px;
+  padding: 1.5%;
+  border-bottom: 3px solid var(--light-color);
+}
+
+
+.shipping-address form {
+  display: flex;
+  flex-direction: column;
+}
+.shipping-address form div {
+  display: flex;
+  padding: 0.1rem;
+}
+.shipping-address label {
+  display: block;
+  width: 30%;
+  text-align: right;
+  padding-right: 0.5rem;
+  color: gray;
+}
+.shipping-address span {
+  color: var(--dark-text);
+}
+
+
+/*main: 3-block*/
+.line-items {
+  background-color: #FBF9FB;
+  padding: 1.5%;
+  font-size: 12px;
+}
+.line-items table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--dark-text);
+}
+.line-items table th {
+  background-color: #F8F6F8;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  font-weight: lighter;
+  padding: 1%;
+}
+.line-items table td {
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  padding: 0.5% 1%;
+}
+
+.line-items th:nth-child(1) { text-align: left; }
+.line-items td:nth-child(2) { text-align: center; }
+
+.line-items td:nth-child(3), .line-items th:nth-child(3),
+.line-items td:nth-child(4), th:nth-child(4) {
+  text-align: right;
+}
+/*FOOTER*/
+footer {
+  height: 35px;
+  background-color: #2F3B47;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .fa {
+  color: var(--order-details-color);
+  padding-right: 1rem;
+}
+
+/*GENERAL ICONS PROPERTIES*/
+.fa:focus { outline: none; }
+.fa:hover { cursor: pointer; }
+
+/*MEDIA QUERIES*/
+@media (max-width: 900px) { /*для экранов поменьше*/
+  .container {
+    width: 100vw;
+  }
+}

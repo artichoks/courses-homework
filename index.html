@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Orders</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div id="border-top"></div>
+  <div class="container">
+    <!--sidebar contains search form and list of orders -->
+    <aside>
+      <div class="sidebar-header">
+        <button class="fa fa-angle-left"></button>
+        <header id="aside-header-text">Orders(10)</header>
+      </div>
+      <form action="" class="search-form">
+        <input type="search" class="search-query" placeholder="Поиск">
+        <button type="submit" class="fa fa-search"></button>
+        <button type="reset" class="fa fa-refresh"></button>
+      </form>
+
+      <div class="orders-wrapper">
+        <div class="order-item">
+          <!--item 1 -->
+          <div>
+            <p class="order-number">Order 7991</p>
+            <p>Berglunds snabbkop</p>
+            <p>Shipped: 25 нояб. 2016 г.</p>
+          </div>
+          <div class="text-right">
+            <p class="order-date">21.11.2016</p>
+            <p class="status-in-time">In time</p>
+          </div>
+        </div>
+        <!--item 2 -->
+        <div class="order-item opened">
+          <div>
+            <p class="order-number">Order 7918</p>
+            <p>Turtuga Restaurante</p>
+            <p>Shipped: 26 сент. 2016 г.</p>
+          </div>
+          <div class="text-right">
+            <p class="order-date">18.09.2016</p>
+            <p class="status-urgent">Urgent</p>
+          </div>
+        </div>
+        <!--item 3-->
+        <div class="order-item">
+          <div>
+            <p class="order-number">Order 7375</p>
+            <p>Around the Horn</p>
+            <p>Shipped: 14 окт. 2016 г.</p>
+          </div>
+          <div class="text-right">
+            <p class="order-date">06.10.2016</p>
+            <p class="status-in-time">In time</p>
+          </div>
+        </div>
+        <!--item 4-->
+        <div class="order-item">
+          <div>
+            <p class="order-number">Order 7311</p>
+            <p>Alfreds Futterkiste</p>
+            <p>Shipped: 25 нояб. 2016 г.</p>
+          </div>
+          <div class="text-right">
+            <p class="order-date">21.11.2016</p>
+            <p class="status-in-time">In time</p>
+          </div>
+        </div>
+        <!--item 5-->
+        <div class="order-item">
+          <div>
+            <p class="order-number">Order 6858</p>
+            <p>Tortuga Restaurante</p>
+            <p>Shipped: 14 нояб. 2016 г.</p>
+          </div>
+          <div class="text-right">
+            <p class="order-date">13.11.2016</p>
+            <p class="status-in-time">In time</p>
+          </div>
+        </div>
+        <!--item 6-->
+        <div class="order-item">
+          <div>
+            <p class="order-number">Order 6368</p>
+            <p>Alfreds Futterkiste</p>
+            <p>Shipped: 19 нояб. 2016 г.</p>
+          </div>
+          <div class="text-right">
+            <p class="order-date">13.11.2016</p>
+            <p class="status-in-time">In time</p>
+          </div>
+        </div>
+        <!--item 7-->
+        <div class="order-item">
+          <div>
+            <p class="order-number">Order 6189</p>
+            <p>Berglunds snabbkop</p>
+            <p>Shipped: 20 нояб. 2016 г.</p>
+          </div>
+          <div class="text-right">
+            <p class="order-date">28.11.2016</p>
+            <p class="status-in-time">In time</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <button class="fa fa-filter "></button>
+        <button class="fa fa-bars"></button>
+      </footer>
+    </aside>
+
+    <!-- order details -->
+    <main>
+      <header class="main-header">Order</header>
+      <div class="main-content">
+            <div class="general-info">
+              <div class="first-row">
+                <div class="left-side">
+                  <p class="big-font" style="color: black">Order 7918</p>
+                  <p>Customer: Tortuga Restaurante</p>
+                  <p>Ordered: 18 сент. 2016 г.</p>
+                  <p>Shipped: 26 сент. 2016 г.</p>
+                </div>
+
+                <div class="right-side">
+                  <p class="big-font">150 935,13</p>
+                  <p>EUR</p>
+                </div>
+              </div>
+
+              <div class="second-row">
+                <button class="fa fa-truck fa-3x" id="active"></button>
+                <button class="fa fa-user-circle-o fa-3x"></button>
+              </div>
+            </div>
+            <!--block 2 -->
+            <div class="shipping-address">
+              <h2>Shipping Address</h2>
+              <form action="">
+                <div class="sh-address-row"><label for="address-name">Name: </label><span id="address-name"> ExcellentParcel</span></div>
+                <div class="sh-address-row"><label for="address-street">Street: </label><span id="address-street"> Tottenham Court Road</span></div>
+                <div class="sh-address-row"><label for="address-zipCode-city">ZIP Code / City: </label><span id="address-zipCode-city"> N170AA London</span></div>
+                <div class="sh-address-row"><label for="address-region">Region:</label><span id="address-region">Greater London</span></div>
+                <div class="sh-address-row"><label for="address-country">Country:</label><span id="address-country">United Kingdom</span></div>
+              </form>
+            </div>
+            <!--block 3 -->
+            <div class="line-items">
+              <h2>Line Items (4)</h2>
+              <table>
+                <tr>
+                  <th>Product</th>
+                  <th>Unit Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                </tr>
+                <tr>
+                  <td><strong>Aniseed Syrup</strong><br>1412</td>
+                  <td><strong>65.89</strong> EUR</td>
+                  <td>899</td>
+                  <td><strong>59 235,11</strong> EUR</td>
+                </tr>
+                <tr>
+                  <td><strong>Tunnbrod</strong><br>5672</td>
+                  <td><strong>14.77</strong> EUR</td>
+                  <td>2367</td>
+                  <td><strong>34 960,59</strong> EUR</td>
+                </tr>
+                <tr>
+                  <td><strong>NorthwoodCranberry Sauce</strong><br>5046</td>
+                  <td><strong>61,69</strong> EUR</td>
+                  <td>867</td>
+                  <td><strong>53 485,28</strong> EUR</td>
+                </tr>
+                <tr>
+                  <td><strong>Camembert Pierrot</strong><br>9505</td>
+                  <td><strong>3.07</strong> EUR</td>
+                  <td>1060</td>
+                  <td><strong>3 254,20</strong> EUR</td>
+                </tr>
+              </table>
+            </div> <!-- block 3 end -->
+      </div> <!--main-content -->
+      <footer>
+        <button class="fa fa-envelope-o"></button>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
